@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pemilu HMJ - Binus @Malang</title>
+        <link href="/pages/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- BACKGROUND AND OVERLAY -->
+        <section class="background">
+            <div class="overlay"></div>
+        </section>
+
+        <!-- HEADER -->
+        <header class="header-container">
+            <img src="../assets/ribbon.png" alt="ribbonBinus" id="ribbon">
+            <img src="../assets/logo-binus.png" alt="logoBinus" id="logo">
+            <h1 id="headText">Pemilihan Umum Ketua HIMFO</h1>
+        </header>
+
+        <!-- CARDS AND SUBMIT -->
+        <div class="card-container">
+            <div class="cards">
+                <h3 style="font-family: Arial, Helvetica, sans-serif">CALON 1</h3>
+                <label>
+                    <input type="radio" name="calon1" value="1">
+                    <img src="../assets/calon/HIMFO1.jpg" alt="calonUrut1" class="fotoCalon">
+                </label>
+                <div class="container">
+                    <h1>Harrya Grahila Prabaswara</h1>
+                </div>         
+            </div>
+        
+            <div class="cards">
+                <h3 style="font-family: Arial, Helvetica, sans-serif">CALON 2</h3>
+                <label>
+                    <input type="radio" name="calon2" value="2">
+                    <img src="../assets/calon/HIMFO2.jpg" alt="calonUrut2" class="fotoCalon">
+                </label>
+                <div class="container">
+                    <h1>Albertus Favian Herbert</h1>
+                </div>
+            </div>            
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer-container">
+            <div id="systemDate">
+                <?php
+                    date_default_timezone_set('Asia/Jakarta');
+                    echo "<i>".date('l, d/M/Y')."</i>"."   ";  
+                ?>
+            </div>
+            <a href="pages/admin.php" class="linkFoot" id="linkAdmin">Admin</a>
+            <div class="linkFoot"> | </div>
+            <a href="pages/petunjuk.php" class="linkFoot" id="linkPetunjuk">Petunjuk</a>
+        </footer>
+    </body>
+</html>
