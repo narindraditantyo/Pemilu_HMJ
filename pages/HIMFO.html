@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Pemilu HMJ - Binus @Malang</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="/pages/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <!-- BACKGROUND AND OVERLAY -->
@@ -18,29 +18,32 @@
         </header>
 
         <!-- LOGIN BOX -->
-        <div class="login-box">
-            <p>
-                <span class="text-box">
-                    <span class="icon">
-                        <i class="icon-people"></i>
-                    </span>
-                    <input type="text" name="inputNIM" placeholder="Binusian ID">
-                </span>
-            </p>
-
-            <p>
-                <span class="text-box">
-                    <span class="icon">
-                        <i class="icon-lock"></i>
-                    </span>
-                    <input type="password" name="inputKode" placeholder="Individual Code">
-                </span>
-            </p>
-
-            <p>
-                <input type="submit" name="submit" class="button">
-            </p>
-        </div>
+        <section class="wrapper">
+            <div id="login" class="login" style="width: 385px; min-height: 360px; margin-top: -30.9px;">
+                <div class="login-head">
+                    <div class="logo">
+                        <span class="site-name">
+                            <img src="../assets/logo-jurusan/HIMFO.png" alt="logoHIMFO" id="imgLogo">
+                        </span>
+                    </div>
+                </div>
+                <form action="loginHIMFO.php" method="POST" class="custom-form" autocomplete="off" style="padding: 20px 40px 10px;">
+                    <div class="user-input">
+                        <label class="suffix-wrapper">
+                            <input type="text" name="NIM" placeholder="Binusian ID" style="font-size: small;">
+                        </label>
+                    </div>
+                    <p>
+                        <span class="custom-textbox">
+                            <input type="text" name="kode" placeholder="Personal Code" autocomplete="off" id="kode">
+                        </span>
+                    </p>
+                    <p>
+                        <input type="submit" name="login" value="Login" class="button-primary">
+                    </p>
+                </form>
+            </div>
+        </section>
 
         <!-- FOOTER -->
         <footer class="footer-container">
@@ -50,9 +53,9 @@
                     echo "<i>".date('l, d/M/Y')."</i>"."   ";  
                 ?>
             </div>
-            <a href="pages/admin.php" class="linkFoot" id="linkAdmin">Admin</a>
+            <a href="pages/admin.php" class="linkFoot" id="linkAdmin"><b>Admin</b></a>
             <div class="linkFoot"> | </div>
-            <a href="pages/petunjuk.php" class="linkFoot" id="linkPetunjuk">Petunjuk</a>
+            <a href="pages/petunjuk.php" class="linkFoot" id="linkPetunjuk"><b>Petunjuk</b></a>
         </footer>
     </body>
 </html>

@@ -71,18 +71,12 @@
 
 #headText2
 {
-    float       : right;
-    margin-right: 16rem;
-    font-family : Arial, Helvetica, sans-serif;
-    font-size   : 18px;
-    letter-spacing: 1.95px;
-    color       : #444444;
-}
-
-.logoJurusan
-{
-    width   : auto;
-    height  : 150px;
+    float           : right;
+    margin-right    : 16rem;
+    font-family     : Arial, Helvetica, sans-serif;
+    font-size       : 18px;
+    letter-spacing  : 1.95px;
+    color           : #444444;
 }
 
 .card-container
@@ -121,7 +115,7 @@
     font-family : Arial, Helvetica, sans-serif;
     font-size   : 16px;
     padding     : 2px 16px;
-    margin-top  : 25px;
+    margin-top  : 24px;
     text-align  : center;
 }
 
