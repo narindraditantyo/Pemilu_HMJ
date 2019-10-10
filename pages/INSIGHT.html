@@ -18,32 +18,29 @@
         </header>
 
         <!-- LOGIN BOX -->
-        <section class="wrapper">
-            <div id="login" class="login" style="width: 385px; min-height: 360px; margin-top: -30.9px;">
-                <div class="login-head">
-                    <div class="logo">
-                        <span class="site-name">
-                            <img src="../assets/logo-jurusan/INSIGHT.webp" alt="logoHIMFO" id="imgLogo">
-                        </span>
-                    </div>
-                </div>
-                <form action="loginINSIGHT.php" method="POST" class="custom-form" autocomplete="off" style="padding: 20px 40px 10px;">
-                    <div class="user-input">
-                        <label class="suffix-wrapper">
-                            <input type="text" name="NIM" placeholder="Binusian ID" style="font-size: small;">
-                        </label>
-                    </div>
-                    <p>
-                        <span class="custom-textbox">
+        <div class="card-container-login">
+                <div class="cards">
+                    <img src="../assets/logo-jurusan/INSIGHT.webp" alt="logoHIMFO" id="imgLogo">
+                    <form action="loginHIMFO.php" method="post" autocomplete="off">
+                        <div id="user-input">
+                            <input type="text" name="NIM" placeholder="Nomor Induk Mahasiswa" autocomplete="off" style="font-size: small;">
+                        </div>
+    
+                        <div id="user-code">
                             <input type="text" name="kode" placeholder="Personal Code" autocomplete="off" id="kode">
-                        </span>
-                    </p>
-                    <p>
-                        <input type="submit" name="login" value="Login" class="button-primary">
-                    </p>
-                </form>
+                        </div>
+    
+                        <p>
+                            <input type="submit" name="login" value="Login" class="button-primary">
+                        </p>
+                    </form>
+                    <form action="../index.html">
+                        <p>
+                            <input type="submit" name="back" value="Back" class="button-primary-back">
+                        </p>
+                    </form>
+                </div>
             </div>
-        </section>
 
         <!-- FOOTER -->
         <footer class="footer-container">
@@ -53,7 +50,7 @@
                     echo "<i>".date('l, d/M/Y')."</i>"."   ";  
                 ?>
             </div>
-            <a href="pages/admin.php" class="linkFoot" id="linkAdmin"><b>Admin</b></a>
+            <a href="pages/ADMIN.html" class="linkFoot" id="linkAdmin"><b>Admin</b></a>
             <div class="linkFoot"> | </div>
             <a href="pages/petunjuk.php" class="linkFoot" id="linkPetunjuk"><b>Petunjuk</b></a>
         </footer>
