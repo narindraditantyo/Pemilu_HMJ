@@ -113,8 +113,6 @@
     width: auto;
 }
 
-
-
 .card-container
 {
     display                 : grid;
@@ -137,6 +135,19 @@
     margin-top              : 8rem;
     margin-left             : 42rem;
     margin-right            : 42rem;
+    justify-content         : space-between;
+    z-index                 : 3;
+}
+
+.card-container-pilih
+{
+    display                 : grid;
+    grid-template-columns   : repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap                : 4em;
+    padding                 : 4rem;
+    margin-top              : 16rem;
+    margin-left             : 16rem;
+    margin-right            : 16rem;
     justify-content         : space-between;
     z-index                 : 3;
 }
@@ -191,7 +202,22 @@
     margin: 20px 16px 0;
 }
 
+#user-pass
+{
+    margin: 20px 16px 0;
+}
+
 input[type="text"]
+{
+    display: block;
+    margin: -10px;
+    padding: 0 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #c9c9c9;
+}
+
+input[type="password"]
 {
     display: block;
     margin: -10px;
@@ -256,28 +282,7 @@ input[type="text"]
 
 #systemDate
 {
-    float       : left;
+    text-align: center;
     margin-top  : 10px;
-    margin-left : 16rem;
     color       : #ffffff;
-}
-
-.linkFoot
-{
-    float           : right;
-    margin-top      : 10px;
-    font-family     : Arial, Helvetica, sans-serif;
-    text-decoration : none;
-    color           : #ffffff;
-}
-
-#linkAdmin
-{
-    margin-left : 16px;
-    margin-right: 16rem;
-}
-
-#linkPetunjuk
-{
-    margin-right: 16px;
 }

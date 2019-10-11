@@ -17,14 +17,14 @@
             <h1 id="headText">Pemilihan Umum Ketua HMBC</h1>
         </header>
 
-        <!-- CARDS AND SUBMIT -->
-        <div class="card-container">
-            <div class="cards">
+        <!-- CARDS -->
+        <div class="card-container-pilih">
+                <div class="cards">
                 <a href="../pages/transfer.php" class="linkCard">
                     <h3 style="font-family: Arial, Helvetica, sans-serif">CALON 1</h3>
                     <img src="../assets/calon/HMBC1.jpg" alt="calonUrut1" class="fotoCalon">
                     <div class="container">
-                        <p>Salmaa Dewi Saskia</p>
+                        <p>Salmaa Dewi Saskia Putri</p>
                     </div>
                 </a>     
             </div>
@@ -42,15 +42,23 @@
 
         <!-- FOOTER -->
         <footer class="footer-container">
-            <div id="systemDate">
-                <?php
-                    date_default_timezone_set('Asia/Jakarta');
-                    echo "<i>".date('l, d/M/Y')."</i>"."   ";  
-                ?>
-            </div>
-            <a href="pages/admin.php" class="linkFoot" id="linkAdmin"><b>Admin</b></a>
-            <div class="linkFoot"> | </div>
-            <a href="pages/petunjuk.php" class="linkFoot" id="linkPetunjuk"><b>Petunjuk</b></a>
-        </footer>
+                <div id="systemDate">
+                    <span id="datetime"></span>
+                    <script>
+                        document.getElementById("datetime").innerHTML = formatDateTime();
+            
+                        function formatDateTime()
+                        {
+                            var d = new Date(),
+                            minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+                            hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+                            ampm = d.getHours() >= 12 ? 'PM' : 'AM',
+                            months = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],
+                            days = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+                            return days[d.getDay()] + ', '+ d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear() + '  |  ' + hours + ':' + minutes + ' ' + ampm;
+                        }
+                    </script>
+                </div>
+            </footer>
     </body>
 </html>
